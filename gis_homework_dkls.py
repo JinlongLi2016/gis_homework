@@ -20,9 +20,6 @@ def main():
 		else:
 			Dealed_list.append(min_node)
 			Dealed_set.add(min_node)
-	# print Dealed_list
-	# print Path
-	# print Dist
 
 def deal_node(index):
 	if Cost[1][index] <500:
@@ -53,20 +50,15 @@ if __name__ == '__main__':
 	Path = [1, 1, 1, 1, 1, 1, 1]
 
 	main()
-	# newPath = Path[2:7]
-	# newDist = Dist[2:7]
-	# Dist_copy = copy.deepcopy(newDist)
-	tpath = [0,0,0,0,0,0,0,0]
+	all_the_path = [0,0,0,0,0,0,0,0]
 	for i in range(2,7):
-		# index = Dist.index(Dist_copy[i])
-		# index = Dist.index(newDist[i])
-		tpath[i] = deal_node(i)
+		all_the_path[i] = deal_node(i)
 	for i in range(2, 7):
 		print '1 => %d:  Min Distance = %d'%(i, Dist[i]),
-		print '   Path:',tpath[i][0],
-		for temp in range(1, len(tpath[i]) - 1):
-			print '=>',tpath[i][temp],
-		print '=>',tpath[i][len(tpath[i])-1]
+		print '   Path:',all_the_path[i][0],
+		for temp in range(1, len(all_the_path[i]) - 1):
+			print '=>',all_the_path[i][temp],
+		print '=>',all_the_path[i][len(all_the_path[i])-1]
 
 
 
