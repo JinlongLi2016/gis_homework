@@ -60,7 +60,7 @@ if __name__ == '__main__':
 			print '=>',all_the_path[i][temp],
 		print '=>',all_the_path[i][len(all_the_path[i])-1]
 
-
+	print("Add a new line")
 
 
 	
